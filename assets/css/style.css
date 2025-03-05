@@ -1,0 +1,1334 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/*
+    * font-family: "Teko", sans-serif;
+    * font-family: "Ubuntu", sans-serif;
+*/
+
+:root {
+    --background-primary: #3f3e42;
+    --background-secondary: #111111;
+    --background-ternary: #1b1b1b;
+    --text-primary: #f34e3a;
+    --text-secondary: #9c9c9c;
+    --text-ternary: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: var(--text-ternary) !important;
+    background-color: var(--text-primary) !important;
+}
+
+
+
+
+/*-------------------------------------
+- SCROLL TO TOP STYLES
+--------------------------------------*/
+
+
+.scroll__top__button a {
+	text-decoration: none !important;
+}
+
+.scroll__top {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	right: 15px;
+	bottom: -15px;
+	z-index: 99999;
+	background: var(--text-primary);
+	width: 40px;
+	height: 40px;
+	border-radius: 2px;
+	transition: all 0.4s;
+	border: none;
+}
+
+.scroll__top i {
+	font-size: 24px;
+	color: var(--text-ternary);
+	line-height: 0;
+	transition: all 0.4s;
+
+}
+
+.scroll__top:hover {
+	background: var(--text-ternary);
+}
+
+.scroll__top:hover i {
+  color: var(--text-primary);
+}
+
+.scroll__top.active {
+	visibility: visible;
+	opacity: 1;
+	bottom: 15px;
+}
+
+
+
+
+
+/*-------------------------------------
+- HEADER STYLES
+--------------------------------------*/
+
+.navbar-brand img {
+    width: 150px;
+    height: auto;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--text-primary);
+}
+
+.navbar .navbar-toggler {
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+/* .navbar .navbar-toggler .navbar-toggler-icon {
+    color: var(--text-primary) !important;
+    border: 0 !important;
+    outline: 0 !important;
+} */
+
+.navbar__btn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-primary);
+    margin: 6px 0;
+    transition: all 500ms ease;
+    border-radius: 5px;
+}
+
+.change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+
+@media screen and (max-width: 979px) {
+    .navbar {
+        position: fixed !important;
+        z-index: 1030; 
+        right: 0;
+        left: 0;   
+        border-radius: 0;
+        top: 0;
+        background-color: var(--background-secondary);
+    }
+
+}
+
+
+
+
+/*-------------------------------------
+- HOME HERO SECTION STYLES
+--------------------------------------*/
+
+.home__hero {
+    background-image: url('../images/hero__bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.hero__left .hero__content h1 {
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-size: 7rem;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    letter-spacing: 2.4rem;
+}
+
+.hero__left .hero__content p {
+    font-family: "Teko", sans-serif;
+    color: var(--text-ternary);
+    max-width: 450px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: -70px;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+/* .hero__right h2 {
+    font-family: "Teko", sans-serif;
+    color: var(--text-ternary);
+    text-transform: uppercase;
+    text-orientation:;
+    transform: rotateZ(90deg);
+} */
+
+.hero__bottom__text {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+}
+
+.hero__bottom__text h2 {
+    font-size: 22rem;
+    color: var(--background-secondary);
+    font-family: "Teko", sans-serif;
+    font-weight: 900;
+    letter-spacing: 20px;
+}
+
+.hero__bottom__right {
+    position: absolute;
+    right: 0;
+}
+
+.hero__bottom__right h5 {
+    font-family: "Teko", sans-serif;
+    color: var(--text-ternary);
+    text-transform: uppercase;
+    font-size: 3.8rem;
+    transform: rotateZ(90deg);
+}
+
+
+@media screen and (max-width: 767px) {
+    .hero__left .hero__content {
+        margin-top: 80px;
+    }
+    .hero__left .hero__content h1 {
+        font-size: 3rem;
+        letter-spacing: 1.4rem;
+    }
+
+    .hero__left .hero__content p {
+        margin-top: -40px;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .hero__bottom__text {
+        bottom: 0;
+    }
+
+    .hero__bottom__text h2 {
+        font-size: 6.8rem;
+    }
+
+    .hero__bottom__right h5 {
+        margin-top: 30px;
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+/*-------------------------------------
+- ##FOR ALL PAGE SECTION HEAD STYLES
+--------------------------------------*/
+
+.section__head h2 {
+    font-size: 3.125rem;
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.section__head h5 {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: "Ubuntu", sans-serif;
+    padding: 0 200px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .section__head h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section__head h5 {
+        padding: 0;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+/*-------------------------------------
+- HOME FEAD SECTION STYLES
+--------------------------------------*/
+
+
+.home__fead {
+    background-color: var(--background-secondary);
+}
+
+.home__fead__card {
+    background-color: transparent !important;
+    border: 0 !important;
+    text-align: center;
+}
+
+.home__fead__card .card__body .card__title a {
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: var(--text-ternary);
+    transition: all 500ms ease;
+}
+
+.home__fead__card .card__body .card__title a:hover {
+    color: var(--text-primary);
+}
+
+.home__fead__card .card__body .card__text {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--text-secondary);
+}
+
+
+
+
+
+
+/*-------------------------------------
+- HOME GYM QUOTE SECTION STYLES
+--------------------------------------*/
+
+.gym__quote {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.gym__quote__inner {
+    background-color: var(--background-ternary);
+}
+
+.gym__quote__content {
+    padding: 0 120px;
+}
+
+.gym__quote__content .quote__heading h2 {
+    font-family: "Teko", sans-serif;
+    color: var(--text-secondary);
+    font-size: 9.375rem;
+    font-weight: 300;
+}
+
+.gym__quote__content .quote__heading h5 {
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-top: -110px;
+}
+
+.gym__quote__content .quote__text p {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.quote__btn a {
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--text-primary);
+    color: var(--text-ternary);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 40px;
+    letter-spacing: 1px;
+    transition: all 500ms ease;
+}
+
+.quote__btn a:hover {
+    opacity: 0.9;
+}
+
+.gym__qoute__img img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 767px) {
+    .gym__quote__content {
+        padding: 0 10px;
+    }
+
+    .gym__quote__content .quote__heading h2 {
+        font-size: 5rem;
+    }
+
+    .gym__quote__content .quote__heading h5 {
+        font-size: 2.2rem;
+        margin-top: -70px;
+    }
+}
+
+
+
+
+/*-------------------------------------
+- HOME PROTEIN SECTION STYLES
+--------------------------------------*/
+
+.protein__inner {
+    background-color: var(--background-secondary);
+    overflow: hidden;
+}
+
+.protein__cards {
+    padding: 0 20px;
+}
+
+.protein__card {
+    background-color: transparent !important;
+    border: 0 !important;
+}
+
+.protein__card .card__img img {
+    width: 100%;
+    height: auto;
+}
+
+.protein__card .protein__text p {
+    text-align: center;
+    color: var(--text-secondary);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0 40px;
+}
+
+.protein__card .card__body {
+    font-family: "Teko", sans-serif;
+    color: var(--text-ternary);
+    text-transform: uppercase;
+}
+
+.protein__card .card__body .card__title a {
+    text-decoration: none;
+    color: var(--text-ternary);
+    font-size: 1.8rem;
+    transition: all 500ms ease;
+}
+
+.protein__card .card__body .card__title a:hover {
+    color: var(--text-primary);
+}
+
+.protein__card .card__body .card__subtitle {
+    font-size: 1.4rem;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .protein__card .protein__text p {
+        padding: 0 0;
+    }
+}
+
+
+
+
+/*-------------------------------------
+- PRICING PLANS SECTION STYLES
+--------------------------------------*/
+
+.pricing {
+    background-color: var(--background-ternary);
+    overflow: hidden;
+}
+
+.pricing__head .pricing__heading h2 {
+    font-family: "Teko", sans-serif;
+    color: var(--text-secondary);
+    font-size: 9.375rem;
+    font-weight: 300;
+}
+
+.pricing__head .pricing__heading h5 {
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-top: -110px;
+}
+
+.pricing__card {
+    background-color: #29282d !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.pricing__card .card__head h2 {
+    font-family: "Teko", sans-serif;
+    color: var(--text-ternary);
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.pricing__card .card__head h2 sup {
+    font-size: 1.8rem;
+}
+
+.pricing__card .card__head p {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: -10px;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+
+.pricing__card .card__body h3 {
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.pricing__card .card__body ul li {
+    padding: 18px 0;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--text-ternary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+
+.pricing__card .card__btn a {
+    text-decoration: none;
+    color: var(--text-ternary);
+    background-color: var(--text-primary);
+    padding: 15px 30px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+
+
+@media screen and (max-width: 767px) {
+    .pricing__head .pricing__heading h2 {
+        font-size: 5rem;
+    }
+
+    .pricing__head .pricing__heading h5 {
+        font-size: 2.2rem;
+        margin-top: -70px;
+    }
+
+
+}
+
+
+
+/*-------------------------------------
+- SPONSERED SECTION STYLES
+--------------------------------------*/
+
+.sponsered__inner {
+    background-color: var(--text-primary);
+    overflow: hidden;
+}
+
+.sponsered__images .list__img img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+/*-------------------------------------
+- FOOTER SECTION STYLES
+--------------------------------------*/
+
+.footer__inner {
+    background-color: #252525;
+    overflow: hidden;
+}
+
+.footer__heading h3 {
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.footer__body p {
+    color: var(--text-secondary);
+    font-family: "Ubuntu", sans-serif;
+}
+
+.footer__contact__list ul li {
+    padding: 8px 0;
+}
+
+.footer__contact__list ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-family: "Ubuntu", sans-serif;
+    transition: all 500ms ease;
+}
+
+.footer__contact__list ul li a i {
+    transition: all 500ms ease;
+}
+
+.footer__contact__list ul li a:hover i {
+    color: var(--text-primary);
+}
+
+
+
+.footer__news .footer__body ul li a {
+    text-decoration: none;
+}
+
+.footer__news .footer__body ul li h5 a {
+    color: var(--text-secondary);
+    font-family: "Teko", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+
+.footer__news .footer__body ul li h5 a:hover {
+    color: var(--text-ternary);
+}
+
+.footer__news .footer__body ul li p a{
+    color: var(--text-secondary);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+.footer__links ul li {
+    padding: 5px 0;
+}
+
+.footer__links ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+.footer__links ul li a:hover {
+    color: var(--text-ternary);
+}
+
+.footer__contact ::placeholder {
+    color: #a4a4a4 !important;
+}
+
+.footer__contact form input,
+.footer__contact form textarea {
+    border: 0 !important;
+    background-color: #212121 !important;
+    border-radius: 0 !important;
+    color: #a4a4a4 !important;
+    padding: 20px;
+}
+
+.footer__contact form input {
+    height: 2.8rem;
+}
+
+.footer__contact .form__btn a {
+    text-decoration: none;
+    color: var(--text-ternary);
+    text-transform: uppercase;
+    background-color: var(--text-primary);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    transition: all 500ms ease;
+}
+
+.footer__contact .form__btn a:hover {
+    opacity: 0.9;
+}
+
+
+
+.footer__bottom {
+    background-color: var(--background-ternary);
+    padding: 2rem 0;
+    height: auto;
+}
+
+.footer__bottom .footer__bottom__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__bottom .footer__bottom__content .footer__text p,
+.footer__bottom .footer__bottom__content .footer__social p {
+    color: var(--text-secondary);
+    font-family: "Ubuntu", sans-serif;
+    
+}
+
+.footer__bottom .footer__bottom__content .footer__social ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    transition: all 500ms ease;
+}
+
+.footer__bottom .footer__bottom__content .footer__social ul li a:hover {
+    color: var(--text-primary);
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .footer__bottom .footer__bottom__content {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+/*-------------------------------------
+- ##ALL PAGE HEADING CSS STYLES
+--------------------------------------*/
+
+.page__heading h2 {
+    color: var(--text-ternary);
+    text-transform: uppercase;
+    font-family: "Teko", sans-serif;
+    font-size: 6.325rem;
+}
+
+@media screen and (max-width: 767px) {
+    .page__heading h2 {
+        font-size: 2.8rem;
+    }
+}
+
+
+
+
+
+/*-------------------------------------
+- ##ABOUT PAGE CSS STYLES
+--------------------------------------*/
+
+.about__page__inner {
+    background-image: url('../images/about__bg.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+
+.about__blog__inner .section__head h2 {
+    color: var(--background-secondary);
+}
+
+
+.about__card__image,
+.blog__card__image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 220px;
+}
+
+.about__card__image img,
+.blog__card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 500ms ease;
+}
+
+.about__card__image img:hover,
+.blog__card__image img:hover {
+    scale: 1.1;
+}
+
+.about__card,
+.blog__card {
+    background-color: var(--text-ternary);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.about__card .about__card__body,
+.blog__card .blog__card__body {
+    padding: 40px 40px;
+}
+
+.about__card__body .about__card__date,
+.blog__card__body .blog__card__date {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about__card__body .about__card__title a,
+.blog__card__body .blog__card__title a {
+    text-decoration: none;
+    color: var(--background-ternary);
+    font-family: "Teko", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 650;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+
+.about__card__body .about__card__title a:hover,
+.blog__card__body .blog__card__title a:hover {
+    color: var(--text-primary);
+}
+
+.about__card__body .about__card__text,
+.blog__card__body .blog__card__text {
+    color: #808080;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.about__card__body .about__card__btn a,
+.blog__card__body .blog__card__btn a {
+    text-decoration: none;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+/*-------------------------------------
+- ##BLOG PAGE CSS STYLES
+--------------------------------------*/
+
+.blog__page__inner {
+    background-image: url('../images/blog__bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog__quote__card {
+    background-color: var(--text-primary);
+    padding: 40px;
+}
+
+
+.blog__quote .quote__icon i {
+    color: rgba(255,255,255,.7);
+    font-size: 5rem;
+}
+
+.blog__quote .quote__text {
+    margin-top: -40px;
+}
+
+.blog__quote .quote__text a {
+    text-decoration: none;
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+
+.blog__quote .quote__text a:hover {
+    color: var(--background-ternary);
+}
+
+
+
+
+
+
+/*-------------------------------------
+- ##BLOG DETAILS PAGE CSS STYLES
+--------------------------------------*/
+
+.blog__details__page__inner {
+    background-image: url('../images/blog__bg__2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog__details__left {
+    padding: 0;
+    width: 100%;
+}
+
+.blog__details__image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.blog__details__meta .meta__list {
+    display: flex;
+    align-items: center;
+}
+
+.meta__list i {
+    color: var(--text-secondary);
+}
+.meta__list span,
+.meta__list span a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+
+.meta__list span a:hover {
+    color: var(--text-primary);
+}
+
+
+
+.blog__details__content .blog__details__title {
+    color: var(--background-ternary);
+    font-family: "Teko", sans-serif;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.blog__details__content .blog__details__text,
+.blog__details__about .blog__details__text {
+    color: var(--text-secondary);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.blog__details__content blockquote {
+    border-left: 4px solid var(--text-primary) !important;
+}
+
+.blog__details__content blockquote p {
+    padding: 2px 0 2px 15px;
+    color: var(--background-primary);
+    font-family: "Teko", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.blog__middle__img img {
+    width: 100%;
+    height: auto;
+}
+
+.blog__details__bottom .bottom__title {
+    color: var(--background-primary);
+    font-family: "Teko", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+
+
+.blog__details__right .blog__right__title {
+    color: var(--background-ternary);
+    font-family: "Teko", sans-serif;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.blog__details__right .blog__details__archive ul li {
+    padding: 3px 0;
+}
+
+.blog__details__right .blog__details__archive ul li a {
+    text-decoration: none;
+    color: var(--background-primary);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+
+.blog__details__right .blog__details__archive ul li a:hover {
+    color: var(--text-primary);
+}
+
+
+
+
+/* @media screen and (max-width: 767px) {
+    .blog__details__meta .meta__list {
+        display: block;
+    }
+} */
+
+
+
+
+
+
+/*-------------------------------------
+- ##SERVICE PAGE CSS STYLES
+--------------------------------------*/
+
+.service__page__inner {
+    background-image: url('../images/gym__2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.services__types {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden;
+}
+
+.service__card__inner {
+    position: relative;
+    display: inline-block;
+}
+
+.service__card__img img {
+    width: 100%;
+    height: auto;
+}
+
+.service__card__inner .service__card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-ternary); /* or any color */
+    font-size: 24px; /* adjust as needed */
+    text-align: center;
+}
+
+.service__card__content h3 {
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+}
+
+.service__bottom__inner .section__head h2 {
+    color: var(--background-primary);
+}
+
+.service__bottom__crads a {
+    text-decoration: none;
+}
+
+.service__bottom__card {
+    background-color: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.service__image__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service__imge__box__inner {
+    position: relative;
+    display: inline-block;
+}
+
+.service__image__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-ternary); /* or any color */
+    font-size: 24px; /* adjust as needed */
+    text-align: center;
+}
+
+.service__image__text h5 {
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+.service__bottom__img {
+    border: 1px dashed var(--background-primary);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.service__bottom__img {
+    width: 180px;
+    height: 180px;
+}
+
+.service__bottom__img__third {
+    width: 220px;
+    height: 220px;
+}
+
+.service__bottom__img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 500ms ease;
+}
+
+.service__bottom__card .card__body .card__title {
+    color: var(--background-secondary);
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 550;
+    transition: all 500ms ease;
+}
+
+.service__bottom__card .card__body .card__text {
+    color: var(--text-secondary);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.service__bottom__card:hover .service__bottom__img img {
+    scale: 1.1;
+}
+
+.service__bottom__card:hover .card__body .card__title {
+    color: var(--text-primary);
+}
+
+
+@media screen and (max-width: 767px) {
+    .service__page__inner {
+        height: 50vh;
+    }
+}
+
+
+
+
+
+/*-------------------------------------
+- ##CONTACT PAGE CSS STYLES
+--------------------------------------*/
+
+.contact__page__inner {
+    background-image: url('../images/contact__bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.contact__info .contact__info__title {
+    color: var(--background-primary);
+    font-family: "Teko", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contact__info .contact__info__text,
+.contact__info .contact__text {
+    color: var(--text-secondary); 
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.contact__info .contact__info__text a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: all 500ms ease;
+}
+
+.contact__info .contact__info__text a:hover {
+    color: var(--text-primary);
+}
+
+
+.contact__form input,
+.contact__form input:focus,
+.contact__form input:active,
+.contact__form textarea,
+.contact__form textarea:focus,
+.contact__form textarea:active {
+    border: 0 !important;
+    background-color: #f7f7f7;
+    border-radius: 0 !important;
+    padding: 15px 30px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--background-primary);
+}
+
+.contact__btn a {
+    text-decoration: none;
+    color: var(--text-ternary);
+    background-color: var(--text-primary);
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 650;
+    padding: 15px 30px;
+    transition: all 500ms ease;
+}
+
+.contact__btn a:hover {
+    opacity: 0.9;
+}
+
+
+
+.contact__social {
+    background-color: var(--text-primary);
+}
+
+.contact__social .contact__social__heading {
+    color: var(--text-ternary);
+    font-family: "Teko", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contact__social__inner ul li {
+    margin: 0px 15px 0px 0px;
+    width: 55px;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0.2);
+    line-height: 55px;
+    border-radius: 50%;
+    transition: all 500ms ease;
+}
+
+.contact__social__inner ul li a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--text-ternary);
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease;
+}
+
+.contact__social__inner ul li:hover {
+    background-color: var(--text-ternary);
+}
+
+.contact__social__inner ul li:hover a {
+    color: var(--background-primary);
+}
